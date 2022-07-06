@@ -21,7 +21,8 @@
   </node>
 
   <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
-    <remap from="odometry/filtered" to="odometry/filtered_map"/>
+       <param name="publish_filtered_gps" value="true" />   
+       <remap from="odometry/filtered" to="odometry/filtered_map"/>
   </node>
 
 </launch>
